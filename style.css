@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(320deg, #ff6b6b, #ffb63e, #4ecdc4);
+    display: flex;
+    font-weight: bold;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    flex-basis: 400px;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.screen {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 28px;
+    overflow: auto;
+    padding: 15px;
+    text-align: right;
+    width: 100%;
+}
+
+.calculator-button-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.calculator-button {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: inherit;
+    font-size: 24px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.calculator-button.operator,
+.calculator-button.function {
+    background: #ff6b6b;
+}
+
+.calculator-button.operator:last-child,
+.calculator-button.function:last-child {
+    background: #ff4848;
+}
+
+.calculator-button.operator:hover,
+.calculator-button.function:hover {
+    background-color: #ff3333;
+}
+
+.calculator-button:active {
+    background-color: #ff1a1a;
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.double {
+    grid-column: span 2;
+}
+
+.triple {
+    grid-column: span 3;
+}
